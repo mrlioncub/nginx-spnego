@@ -12,7 +12,6 @@ RUN set -x \
   && tar xzf nginx-${NGINX_VERSION}.tar.gz \
   && apk add --no-cache krb5 \
   && apk add --no-cache --virtual .build-deps gcc libc-dev make openssl-dev pcre-dev zlib-dev linux-headers curl gnupg libxslt-dev gd-dev geoip-dev git krb5-dev \
-  && git config --global http.proxy $http_proxy \
   && git clone https://github.com/stnoonan/spnego-http-auth-nginx-module.git nginx-${NGINX_VERSION}/spnego-http-auth-nginx-module \
   && CONFARGS=$(nginx -V 2>&1 | sed -n -e 's/^.*arguments: //p') \
   && CONFARGS=${CONFARGS/-Os -fomit-frame-pointer/-Os} \
