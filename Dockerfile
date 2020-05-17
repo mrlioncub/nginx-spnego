@@ -2,7 +2,7 @@ FROM nginx:1.18.0-alpine
 
 LABEL maintainer="mr.lioncub" \
       release-date="2020–05–08" \
-      link1="https://github.com/stnoonan/spnego-http-auth-nginx-module" \
+      link1="https://github.com/stnoonan/spnego-http-auth-nginx-module"
 
 RUN set -x \
   && tempDir="$(mktemp -d)" \
